@@ -54,7 +54,7 @@ services:
         jei
       DATAPACKS: |
         https://cdn.modrinth.com/data/tpehi7ww/versions/cpJzZfzm/Dungeons%20and%20Taverns%20v3.1.1.zip
-        https://cdn.modrinth.com/data/rYocd2LE/versions/KDwtYgdJ/DnT%20Stronghold%20Rework%20v1.1.2.zip
+        https://github.com/EmanuelMairoll/mc-season-10/raw/master/DnT%20Stronghold%20Rework%20v1.1.2%20(surface%20fix).zip
         https://static.planetminecraft.com/files/resource_media/datapack/doubleelytras.zip
       VANILLATWEAKS_SHARECODE: SXPdLv,47BVbh
       RCON_CMDS_STARTUP:  |-
