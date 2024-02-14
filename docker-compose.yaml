@@ -1,0 +1,138 @@
+version: '3.8'
+services:
+  minecraft-server:
+    image: itzg/minecraft-server
+    container_name: minecraft-server
+    ports:
+      - "25565:25565"
+      - "8123:8123"
+    stdin_open: true
+    tty: true
+    environment:
+      EULA: "TRUE"
+      TYPE: "FABRIC"
+      VERSION: "1.20.4"
+      ENABLE_WHITELIST: "TRUE"
+      MEMORY: "15500M"
+      ONLINE_MODE: "TRUE"
+      MOTD: "Auch Blöcke haben Gefühle"
+      SEED: ${SEED}
+      ENABLE_RCON: "TRUE"
+      RCON_PASSWORD: "DUMMY" # RCON PORT IS NOT EXPOSED
+      DIFFICULTY: "HARD"
+      SPAWN_PROTECTION: 0
+      MAX_PLAYERS: 24
+      MAX_TICK_TIME: 300000
+      VIEW_DISTANCE: 16
+      WHITELIST: |
+        Zeldinator
+        julius_caesar192
+        yeeeh
+        halo_22
+        halo_66
+        ddavare
+        AlexVacBan
+        Floerp
+        FDNTrinity
+        goated666
+        DIGStudent
+        Michlbert
+        haemtim
+        Seyfert_Galaxy
+      CF_API_KEY: ${CF_API_KEY}
+      CURSEFORGE_FILES: |
+        fabric-api
+        carpet
+        carpet-extra
+        carpet-minitweaks
+        rug
+        dynmapforge
+        chunky-pregenerator
+        spark
+        modernfix
+        starlight
+        jei
+      DATAPACKS: |
+        https://cdn.modrinth.com/data/tpehi7ww/versions/cpJzZfzm/Dungeons%20and%20Taverns%20v3.1.1.zip
+        https://cdn.modrinth.com/data/rYocd2LE/versions/KDwtYgdJ/DnT%20Stronghold%20Rework%20v1.1.2.zip
+        https://static.planetminecraft.com/files/resource_media/datapack/doubleelytras.zip
+      VANILLATWEAKS_SHARECODE: SXPdLv,47BVbh
+      RCON_CMDS_STARTUP:  |-
+        gamerule disableElytraMovementCheck true
+        gamerule enderPearlsVanishOnDeath true
+        gamerule playersSleepingPercentage 50
+        gamerule spectatorsGenerateChunks false
+        carpet defaultLoggers tps
+        carpet setDefault chainStone true
+        carpet setDefault commandPlayer 1
+        carpet setDefault flippinCactus true
+        carpet setDefault lightningKillsDropsFix true
+        carpet setDefault movableAmethyst true
+        carpet setDefault optimizedTNT true
+        carpet setDefault placementRotationFix true
+        carpet setDefault renewableBlackstone true
+        carpet setDefault renewableCoral true
+        carpet setDefault renewableDeepslate true
+        carpet setDefault renewableSponges true
+        carpet setDefault rotatorBlock true
+        carpet setDefault shulkerSpawningInEndCities true
+        carpet setDefault stackableShulkerBoxes true
+        carpet setDefault accurateBlockPlacement true
+        carpet setDefault betterBonemeal true
+        carpet setDefault blazeMeal true
+        carpet setDefault blockStateSyncing true
+        carpet setDefault chickenShearing true
+        carpet setDefault clericsFarmWarts true
+        carpet setDefault commandPing true
+        carpet setDefault comparatorReadsClock true
+        carpet setDefault creeperSpawningInJungleTemples true
+        carpet setDefault dispensersCarvePumpkins true
+        carpet setDefault dispensersFeedAnimals true
+        carpet setDefault dispensersFillMinecarts true
+        carpet setDefault dispensersMilkAnimals true
+        carpet setDefault dispensersPlaceBoatsOnIce true
+        carpet setDefault dispensersPotPlants true
+        carpet setDefault dispensersStripBlocks true
+        carpet setDefault dispensersTillSoil true
+        carpet setDefault dispensersToggleThings true
+        carpet setDefault dispensersUseCauldrons true
+        carpet setDefault enderPearlChunkLoading true
+        carpet setDefault flowerPotChunkLoading true
+        carpet setDefault reloadSuffocationFix true
+        carpet setDefault renewableEndstone true
+        carpet setDefault renewableIce true
+        carpet setDefault renewableNetherrack true
+        carpet setDefault renewableSand true
+        carpet setDefault renewableWitherSkeletons true
+        carpet setDefault straySpawningInIgloos true
+        carpet setDefault dispensersBucketMobs true
+        carpet setDefault dispensersCureVillagers true
+        carpet setDefault dispensersDyeMobs true
+        carpet setDefault dispensersNameMobs true
+        carpet setDefault dispensersRepairGolems true
+        carpet setDefault dyeableShearedSheep true
+        carpet setDefault dyeableShulkers true
+        carpet setDefault infinityMendingStacking true
+        carpet setDefault lightningGlowifiesSquids true
+        carpet setDefault mobsDropNametag true
+        carpet setDefault noFeatherFallingTrample true
+        carpet setDefault quickHarvesting true
+        carpet setDefault renewableDragonEgg true
+        carpet setDefault renewableRawOres true
+        carpet setDefault shaveSnowLayers true
+        carpet setDefault slimeLooting true
+        carpet setDefault infinityNeedsArrow false
+        carpet setDefault dragonDrops none
+        chunky shape circle
+        chunky radius 2048
+        chunky start
+        chunky world the_nether
+        chunky radius 256
+        chunky start
+        chunky world world_the_end
+        chunky radius 256
+        chunky start
+        script load overlay
+    volumes:
+      - /opt/minecraft/data:/data
+    restart: unless-stopped
