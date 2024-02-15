@@ -39,6 +39,9 @@ services:
         Michlbert
         haemtim
         Seyfert_Galaxy
+        ObamaCBTGaming
+        Jules_Jules
+        Adoom
       CF_API_KEY: ${CF_API_KEY}
       CURSEFORGE_FILES: |
         fabric-api
