@@ -43,6 +43,7 @@ services:
         ObamaCBTGaming
         Jules_Jules
         Adoom
+        Eragon_m8
       CF_API_KEY: ${CF_API_KEY}
       CURSEFORGE_FILES: |
         fabric-api
