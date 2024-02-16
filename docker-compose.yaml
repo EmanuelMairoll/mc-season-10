@@ -45,6 +45,7 @@ services:
         Adoom
         Eragon_m8
       CF_API_KEY: ${CF_API_KEY}
+      # MOST RECENT CHUNKY VERSION BREAKS /chunky command, falling back to 1.3.92
       CURSEFORGE_FILES: |
         fabric-api
         carpet
@@ -53,7 +54,7 @@ services:
         rug
         simple-voice-chat
         dynmapforge
-        chunky-pregenerator
+        https://www.curseforge.com/minecraft/mc-mods/chunky-pregenerator/files/4591974
         spark
         modernfix
         starlight
