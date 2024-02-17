@@ -67,11 +67,11 @@ services:
       RCON_CMDS_STARTUP:  |-
         gamerule disableElytraMovementCheck true
         gamerule enderPearlsVanishOnDeath true
-        gamerule playersSleepingPercentage 50
+        gamerule playersSleepingPercentage 1
         gamerule spectatorsGenerateChunks false
         carpet defaultLoggers tps
         carpet setDefault chainStone true
-        carpet setDefault commandPlayer 1
+        carpet setDefault commandPlayer 0
         carpet setDefault flippinCactus true
         carpet setDefault lightningKillsDropsFix true
         carpet setDefault movableAmethyst true
