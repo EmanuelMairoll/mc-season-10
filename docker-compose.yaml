@@ -69,6 +69,8 @@ services:
         gamerule enderPearlsVanishOnDeath true
         gamerule playersSleepingPercentage 1
         gamerule spectatorsGenerateChunks false
+        dmarker add id:11 spawn icon:portal set:11 x:23 y:116 z:15 world:the_nether
+        dmarker add id:12 ironfarm icon:portal set:12 x:-15 y:116 z:73 world:the_nether
         carpet defaultLoggers tps
         carpet setDefault chainStone true
         carpet setDefault commandPlayer 0
