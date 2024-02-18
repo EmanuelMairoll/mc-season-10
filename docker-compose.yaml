@@ -14,7 +14,7 @@ services:
       TYPE: "FABRIC"
       VERSION: "1.20.4"
       ENABLE_WHITELIST: "TRUE"
-      MEMORY: "15500M"
+      MEMORY: "30G"
       ONLINE_MODE: "TRUE"
       MOTD: "Auch Blöcke haben Gefühle"
       SEED: ${SEED}
@@ -23,8 +23,8 @@ services:
       DIFFICULTY: "HARD"
       SPAWN_PROTECTION: 0
       MAX_PLAYERS: 24
-      MAX_TICK_TIME: 300000
-      VIEW_DISTANCE: 16
+      MAX_TICK_TIME: 600000
+      VIEW_DISTANCE: 12
       WHITELIST: |
         Zeldinator
         julius_caesar192
@@ -42,7 +42,7 @@ services:
         Seyfert_Galaxy
         ObamaCBTGaming
         Jules_Jules
-        Adoom
+        Adoom7
         Eragon_m8
       CF_API_KEY: ${CF_API_KEY}
       # MOST RECENT CHUNKY VERSION BREAKS /chunky command, falling back to 1.3.92
@@ -52,7 +52,9 @@ services:
         carpet-extra
         carpet-minitweaks
         rug
+        noexpensive
         simple-voice-chat
+        no-chat-reports
         dynmapforge
         https://www.curseforge.com/minecraft/mc-mods/chunky-pregenerator/files/4591974
         spark
@@ -130,15 +132,6 @@ services:
         carpet setDefault slimeLooting true
         carpet setDefault infinityNeedsArrow false
         carpet setDefault dragonDrops none
-        chunky shape circle
-        chunky radius 2048
-        chunky start
-        chunky world the_nether
-        chunky radius 256
-        chunky start
-        chunky world world_the_end
-        chunky radius 256
-        chunky start
         script load overlay
     volumes:
       - /opt/minecraft/data:/data
